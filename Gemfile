@@ -17,14 +17,18 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-	gem 'rspec-rails'
 	gem 'faker'
 	gem 'database_cleaner'
 	gem 'rails-controller-testing'
+	gem 'pry-rails'
+	gem 'rspec-core', 				git: 'https://github.com/rspec/rspec-core'	
+	gem 'rspec-expectations', git: 'https://github.com/rspec/rspec-expectations'					
+	gem 'rspec-mocks', 				git: 'https://github.com/rspec/rspec-mocks'	
+	gem 'rspec-rails', 				git: 'https://github.com/rspec/rspec-rails'	
+	gem 'rspec-support', 			git: 'https://github.com/rspec/rspec-support'		
 end
 
 group :development do
-	gem 'pry-rails'
 	gem 'rubocop', require: false
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
